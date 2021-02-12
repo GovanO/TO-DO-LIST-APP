@@ -86,8 +86,6 @@ function submitSignUp(e) {
   dashboard.style.visibility = "visible";
   let createToDo = document.querySelector(".newToDo");
   createToDo.style.visibility = "visible";
-//   const mySavedToDoLists = document.querySelector(".mySavedToDoLists");
-//   mySavedToDoLists.style.visibility = "visible";
   
   const userLists = JSON.parse(localStorage.getItem("allLists")) || [];
   
@@ -182,23 +180,26 @@ function checkForLogInErrors(e) {
   const logInPassword = document.getElementById("logInPassword");
   
   const users = JSON.parse(localStorage.getItem("usersData")) || [];
- 
+
   for (let i = 0; i < users.length; i++) {
-    
     if (logInEmail.value !== users[i].email ||
         logInPassword.value !== users[i].password) {
       messages.push("Incorrect email or password... Try again.");
-    }   if (logInEmail.value === users[i].email &&
-      logInPassword.value === users[i].password) {
-      submitLogIn(e);
+    } if (logInEmail.value === users[i].email &&
+        logInPassword.value === users[i].password) {
+        submitLogIn(e);
       break;
-    }
-  }
+    }   
+ }
   
-  if (messages.length > 0) {
+  if (messages.length === 0) {
+      messages.push("Incorrect email or password... Try again.");
+    }
+  
+  if (messages.length >= 0) {
     const logInErrors = document.getElementById("logInErrors");
     logInErrors.style.visibility = "visible";
-    logInErrors.innerText = messages[0];
+    logInErrors.innerText = messages.join(", ");
     setTimeout(hideLogInErrorMessage, 3000);
   }
 }
@@ -221,8 +222,6 @@ function submitLogIn(e) {
   dashboard.style.visibility = "visible";
   let createToDo = document.querySelector(".newToDo");
   createToDo.style.visibility = "visible";
-//   const mySavedToDoLists = document.querySelector(".mySavedToDoLists");
-//   mySavedToDoLists.style.visibility = "visible";
   
   const signUpEmail = document.getElementById("signUpEmail");
   
@@ -895,13 +894,14 @@ function logoutCurrentUser() {
     mySavedToDoLists.innerHTML = "";
     toDoList.style.visibility = "hidden";
     logInForm.style.visibility = "visible";
-    const signUpForm = document.querySelector(".signUpForm");
+    const signUpForm = document.getElementById("signUpForm");
     signUpForm.style.visibility = "hidden";
   }
   
   const myNewSignUpForm = document.getElementById("signUpForm");
 
   myNewSignUpForm.addEventListener("submit", checkForSignUpErrorsAgain);
+  
 }
  
 function checkForSignUpErrorsAgain(e) {
