@@ -1,0 +1,369 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.app-frame {
+  position: relative;
+  margin: auto;
+  width: 800px;
+  height: 1050px;
+  background-color: lightblue;
+}
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+h2 {
+  text-align: center;
+  padding: 50px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 50px;
+}
+.sign-up-button {
+  font-size: 40px;
+  padding: 10px;
+}
+.log-in-button {
+  font-size: 40px;
+  padding: 10px;
+}
+#signUpForm {
+  visibility: hidden;
+  text-align: center;
+  position: relative;
+  top: 75px;
+}
+#fname {
+  padding: 5px;
+  margin: 5px;
+}
+#lname {
+  padding: 5px;
+  margin: 5px;
+}
+#signUpEmail {
+  padding: 5px;
+  margin: 5px;
+}
+#signUpPassword {
+  padding: 5px;
+  margin: 5px;
+}
+#checkbox {
+  margin: 20px 5px 25px 0;
+}
+#submitSignUp {
+  font-size: 25px;
+  padding: 0 10px;
+}
+#logInForm {
+  visibility: hidden;
+  text-align: center;
+  position: relative;
+  bottom: 150px;
+}
+#logInEmail {
+  padding: 5px;
+  margin: 5px;
+}
+#logInPassword {
+  padding: 5px;
+  margin: 5px;
+}
+#submitLogIn {
+  font-size: 25px;
+  margin: 15px 0;
+  padding: 0 10px;
+}
+#signUpErrors {
+  visibility: hidden;
+  padding: 10px;
+  color: red;
+}
+#logInErrors {
+  padding: 10px;
+  color: red;
+}
+.dashboard {
+  visibility: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  bottom: 700px;
+  width: 95%;
+  margin: auto;
+  height: 800px;
+  max-height: 20000px;
+  border-radius: 20px;
+  background-color: white;
+}
+.newToDo {
+  visibility: hidden;
+  position: absolute;
+  margin: auto;
+  top: 735px;
+  right: 260px;
+}
+.newToDo button {
+  font-size: 20px;
+  padding: 5px 25px;
+}
+.blankToDo {
+  visibility: hidden;
+  position: absolute;
+  height: 20000px;
+  width: 344px;
+  max-height: 60%;
+  top: 210px;
+  left: 200px;
+  background-color: #FFFFDA;
+  border-radius: 5px;
+  outline: 3px solid black;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.blankToDo ol {
+  margin: 20px 30px;
+  max-height: 20000px;
+}
+.blankToDo li {
+  margin: 10px;
+  padding: 5px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 30px;
+  list-style: none;
+  word-wrap: break-word;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+}
+.blankToDo li:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+.toDoWindow {
+  visibility: hidden;
+  position: absolute;
+  top: 8%;
+  left: 26%;
+  margin: auto;
+  width: 350px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #D8F6FC;
+}
+.toDoTitle {
+  text-align: center;
+  font-size: 20px;
+  padding: 12px 0 0 0;
+}
+.toDoInput {
+  padding: 12px 0 15px 30px;
+}
+.toDoInput input {
+  width: 289px;
+  height: 25px;
+  padding: 5px;
+}
+#createButton {
+  position: absolute;
+  top: 70%;
+  right: 42%;
+  font-size: 17px;
+  padding: 2px 12px 0 12px;
+}
+.saveToDoWindow {
+  visibility: hidden;
+  position: absolute;
+  top: 91%;
+  left: 21%;
+  margin: auto;
+  width: 420px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #D8F6FC;
+}
+.savePanel {
+  padding: 8px 0 15px 30px;
+}
+.savePanel input {
+  width: 289px;
+  height: 35px;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+#saveButton {
+  position: absolute;
+  top: 17%;
+  right: 4%;
+  font-size: 17px;
+  padding: 5px 12px 3px 12px;
+}
+#renameButton {
+  visibility: hidden;
+  position: absolute;
+  top: 17%;
+  right: 4%;
+  font-size: 17px;
+  padding: 5px 12px 3px 12px;
+}
+.mySavedToDoLists {
+  visibility: hidden;
+  position: relative;
+  margin-top: 100px;
+  width: 48%;
+  max-width: 48%;
+  max-height: 70%;
+  left: 205px;
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.mySavedToDoLists li button {
+  width: 310px;
+  padding: 20px;
+  margin: 10px;
+  margin-left: 18px;
+  text-align: center;
+  background-color: lightblue;
+  font-size: 20px;
+  word-wrap: break-word;
+  box-shadow: 5px 10px 15px grey;
+}
+.mySavedToDoLists li button:hover {
+  transform: scale(1.1);
+  transition: 0.1s;
+  background-color: #91C0E9;
+  border: 3px solid black;
+  box-shadow: 5px 10px 8px grey;
+}
+.account {
+  position: absolute;
+  left: 65%;
+  top: 2.3%;
+}
+.accountButton {
+  font-size: 20px;
+  padding: 0 5px;
+}
+#logout {
+  position: absolute;
+  left: 87%;
+  top: 2.3%;
+}
+.log-out button {
+  font-size: 20px;
+  padding: 0 5px;
+}
+.accountSettings {
+  visibility: hidden;
+  position: absolute;
+  margin: auto;
+  width: 400px;
+  height: 360px;
+  left: 25%;
+  top: 26%;
+  border-radius: 10px;
+  background-color: #D8F6FC;
+  z-index: 1;
+}
+.accountSettings:after {
+    content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  border: 2px solid blue;
+}
+.accountSettings1 {
+  position: relative;
+  top: 4%;
+  left: 42%;
+}
+.accountSettings2 {
+  position: relative;
+  top: 17.5%;
+  left: 42%;
+}
+.accountSettings3 {
+  position: relative;
+  top: 32%;
+  left: 44.5%;
+}
+.accountSettings4 {
+  position: relative;
+  top: 46.5%;
+  left: 42%;
+}
+.accountInputSettings1 {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  width: 300px;
+  height: 30px;
+  padding: 5px 15px;
+  font-size: 16px;
+  text-align: center;
+  z-index: 1;
+}
+.accountInputSettings2 {
+  position: absolute;
+  top: 110px;
+  left: 50px;
+  width: 300px;
+  height: 30px;
+  padding: 5px 15px;
+  font-size: 16px;
+  text-align: center;
+  z-index: 1;
+}
+.accountInputSettings3 {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  width: 300px;
+  height: 30px;
+  padding: 5px 15px;
+  font-size: 16px;
+  text-align: center;
+  z-index: 1;
+}
+.accountInputSettings4 {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 300px;
+  height: 30px;
+  padding: 5px 15px;
+  font-size: 16px;
+  text-align: center;
+  z-index: 1;
+}
+.accountSaveButton {
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  width: 80px;
+  height: 35px;
+  font-size: 19px;
+  z-index: 1;
+}
+.accountCancelButton {
+  position: absolute;
+  top: 300px;
+  left: 230px;
+  width: 80px;
+  height: 35px;
+  font-size: 19px;
+  z-index: 1;
+}
+
+

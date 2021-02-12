@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css" >
+  <title>to-do-list app</title>
+</head>
+<body>
+<div class="app-frame">
+  <h1>TO-DO-LIST</h1>
+  <h2 id="h2">This web page serves for making a personalized list of things to do.</h3>
+  <div id="signUpForm">
+    <div id="signUpErrors"></div>
+    <form id="mySignUpForm">
+      <label>First Name</label><br>
+      <input type="text" id="fname" placeholder="John" required/><br>
+      <label>Last Name</label><br>
+      <input type="text" id="lname" placeholder="Wick" required/><br>
+      <label>E-mail</label><br>
+      <input type="text" id="signUpEmail" placeholder="username@gmail.com" required/><br>
+      <label>Password</label><br>
+      <input type="password" id="signUpPassword" placeholder="password" required/><br>
+      <input type="checkbox" id="checkbox" required/>
+      <label id="checkbox-label">I agree to the Terms of Use</label><br>
+      <button type="submit" id="submitSignUp">Submit</button>
+    </form>
+  </div>
+  <div id="logInForm">
+    <div id="logInErrors"></div>
+    <form id="myLogInForm">
+      <label>E-mail</label><br>
+      <input type="text" id="logInEmail" placeholder="username@gmail.com" required/><br>
+      <label>Password</label><br>
+      <input type="password" id="logInPassword" placeholder="password" required/><br>
+      <button id="submitLogIn">Submit</button>
+    </form>
+  </div>
+  <div class="buttons">
+  <button class="sign-up-button">Sign up</button>
+  <button class="log-in-button">Log in</button>
+  </div>
+  <div class="dashboard">
+    <ol class="mySavedToDoLists">
+    </ol>
+    <div class="accountSettings">
+      <div class="accountSettings1">First name:</div>
+      <input type="text" class="accountInputSettings1" />
+      <div class="accountSettings2">Last name:</div>
+      <input type="text" class="accountInputSettings2" />
+      <div class="accountSettings3">Email:</div>
+      <input type="text" class="accountInputSettings3" />
+      <div class="accountSettings4">Password:</div>
+      <input type="text" class="accountInputSettings4" />
+      <button class="accountSaveButton">Save</button>
+      <button class="accountCancelButton">Cancel</button>
+    </div>
+     <div class="account">
+    <button class="accountButton">Account settings</button>
+    </div>
+    <div class="log-out">
+    <button id="logout">Log out</button>
+    </div>
+    <div class="newToDo">
+    <button>Create New to-do List</button>
+    </div>
+    <div class="toDoWindow">
+      <div class="toDoTitle">Add your to-do's:</div>
+        <div class="toDoInputArea">
+          <div class="toDoInput">
+           <input type="text" id="nameYourToDoInput" />
+            <button id="createButton">Add</button>
+        </div>
+     </div>
+   </div>
+    <div class="saveToDoWindow">
+          <div class="savePanel">
+           <input type="text" id="saveYourToDo" placeholder="Name or rename your to-do here..." />
+            <button id="saveButton">Save</button>
+            <button id="renameButton">Save</button>
+        </div>
+     </div>
+       <div class="blankToDo">
+         <ol id="toDoList">
+         </ol>
+       </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+  
+  
+  
+  
+  
+
